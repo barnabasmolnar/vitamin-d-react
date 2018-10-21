@@ -11,7 +11,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-transition-group": "^2.5.0"
   },
   "scripts": {
     "watch:css": "postcss src/styles/index.css -o src/index.css -w",
