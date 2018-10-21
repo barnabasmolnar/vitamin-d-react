@@ -16,6 +16,8 @@ Instructions to install and run the app will follow shortly...
 
 ### TODO:
 * [ ] Add detailed instructions to README
-* [ ] Look into adding some animations/transitions
 * [ ] Add purgeCSS + additional npm scripts
 * [ ] Look into dockerizing the frontend build process
+
+### DONE(ish)
+* [x] Look into adding some animations/transitions ==> Response data now slides in from left and slides out right with a nice fade animation. There's some design decisions to be made, however, about the loading and error components as they currently cause some annoying jumps in layout when they are added to and removed from the DOM. One option might be to present them as a sort of overlay. Will need to think about this a bit more...
