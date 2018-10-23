@@ -1,7 +1,7 @@
 import React from "react";
 
 const CityInfo = props => (
-    <div className="bg-white flex items-center rounded my-4 p-4">
+    <div className="bg-white flex items-center rounded mb-4 p-4">
         <svg
             viewBox="0 0 20 20"
             version="1.1"

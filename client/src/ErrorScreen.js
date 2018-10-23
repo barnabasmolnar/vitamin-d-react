@@ -1,7 +1,7 @@
 import React from "react";
 
 const ErrorScreen = props => (
-    <div className="bg-white flex items-center rounded my-4 p-4">
+    <div className="flex items-center rounded my-6 p-4">
         <svg
             viewBox="0 0 20 20"
             version="1.1"

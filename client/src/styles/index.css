@@ -10,14 +10,3 @@
         transform: rotate(360deg);
     }
 }
-
-.fade-appear {
-    opacity: 0;
-}
-.fade-appear-active {
-    opacity: 1;
-    transition: 10000ms;
-}
-.fade-enter-done {
-    opacity: 1;
-}
