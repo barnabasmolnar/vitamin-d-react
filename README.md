@@ -18,6 +18,7 @@ Instructions to install and run the app will follow shortly...
 * [ ] Add detailed instructions to README
 * [ ] Add purgeCSS + additional npm scripts
 * [ ] Look into dockerizing the frontend build process
+* [ ] Tidy up the structure a bit perhaps? Add a component folder, create a helpers/utilites file and move some stuff there, extract SVG icons into their own components, etc... that sort of stuff. With this being a relatively small-scale project, I don't really feel this would be a must but if I do have some time, I might get around to it eventually.
 
-### DONE(ish)
-* [x] Look into adding some animations/transitions ==> Response data now slides in from left and slides out right with a nice fade animation. There's some design decisions to be made, however, about the loading and error components as they currently cause some annoying jumps in layout when they are added to and removed from the DOM. One option might be to present them as a sort of overlay. Will need to think about this a bit more...
+### DONE
+* [x] Animations added
