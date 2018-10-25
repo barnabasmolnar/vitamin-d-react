@@ -16,9 +16,9 @@ Instructions to install and run the app will follow shortly...
 
 ### TODO:
 * [ ] Add detailed instructions to README
-* [ ] Add purgeCSS + additional npm scripts
 * [ ] Look into dockerizing the frontend build process
-* [ ] Tidy up the structure a bit perhaps? Add a component folder, create a helpers/utilites file and move some stuff there, extract SVG icons into their own components, etc... that sort of stuff. With this being a relatively small-scale project, I don't really feel this would be a must but if I do have some time, I might get around to it eventually.
 
 ### DONE
 * [x] Animations added
+* [x] Add purgeCSS + additional npm scripts
+* [x] Tidy up the structure a bit perhaps? Add a component folder, create a helpers/utilites file and move some stuff there, extract SVG icons into their own components, etc... that sort of stuff. With this being a relatively small-scale project, I don't really feel this would be a must but if I do have some time, I might get around to it eventually.

@@ -1,32 +1,24 @@
 import React, { Component } from "react";
-import Form from "./Form";
 import axios from "axios";
-import ErrorScreen from "./ErrorScreen";
-import LoadingScreen from "./LoadingScreen";
-import CityInfo from "./CityInfo";
-import DaysList from "./DaysList";
-import Overlay from "./Overlay";
 
 import { Transition, TransitionGroup } from "react-transition-group";
 
-// Request state constants
-const LOADING = "LOADING";
-const SUCCESS = "SUCCESS";
-const ERROR = "ERROR";
+import Form from "./components/Form";
+import ErrorScreen from "./components/ErrorScreen";
+import LoadingScreen from "./components/LoadingScreen";
+import CityInfo from "./components/CityInfo";
+import DaysList from "./components/DaysList";
+import Overlay from "./components/Overlay";
 
-// Animation styles
-const cityAnimStyles = {
-    entering: "animated fadeInDown",
-    entered: "animated fadeInDown",
-    exiting: "animated fadeOutUp",
-    exited: "animated fadeOutUp"
-};
-const daysAnimStyles = {
-    entering: "animated fadeInLeft",
-    entered: "animated fadeInLeft",
-    exiting: "animated fadeOutRight",
-    exited: "animated fadeOutRight"
-};
+import {
+    LOADING,
+    SUCCESS,
+    ERROR,
+    cityAnimStyles,
+    daysAnimStyles
+} from "./utils";
+
+import CloseIcon from "./svg/CloseIcon"
 
 class App extends Component {
     constructor(props) {
@@ -100,7 +92,7 @@ class App extends Component {
         event.preventDefault();
     }
 
-    renderResults() {
+    renderErrorOrLoad() {
         switch (this.state.reqState) {
             case ERROR:
                 if (this.state.isErrorScreenOpen) {
@@ -115,26 +107,7 @@ class App extends Component {
                                         })
                                     }
                                 >
-                                    <svg
-                                        viewBox="0 0 20 20"
-                                        version="1.1"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-6 h-6 fill-current"
-                                    >
-                                        <g
-                                            id="Page-1"
-                                            stroke="none"
-                                            strokeWidth="1"
-                                            fillRule="evenodd"
-                                        >
-                                            <g id="icon-shape">
-                                                <path
-                                                    d="M11.4142136,10 L14.2426407,7.17157288 L12.8284271,5.75735931 L10,8.58578644 L7.17157288,5.75735931 L5.75735931,7.17157288 L8.58578644,10 L5.75735931,12.8284271 L7.17157288,14.2426407 L10,11.4142136 L12.8284271,14.2426407 L14.2426407,12.8284271 L11.4142136,10 L11.4142136,10 Z M2.92893219,17.0710678 C6.83417511,20.9763107 13.1658249,20.9763107 17.0710678,17.0710678 C20.9763107,13.1658249 20.9763107,6.83417511 17.0710678,2.92893219 C13.1658249,-0.976310729 6.83417511,-0.976310729 2.92893219,2.92893219 C-0.976310729,6.83417511 -0.976310729,13.1658249 2.92893219,17.0710678 L2.92893219,17.0710678 Z M4.34314575,15.6568542 C7.46734008,18.7810486 12.5326599,18.7810486 15.6568542,15.6568542 C18.7810486,12.5326599 18.7810486,7.46734008 15.6568542,4.34314575 C12.5326599,1.21895142 7.46734008,1.21895142 4.34314575,4.34314575 C1.21895142,7.46734008 1.21895142,12.5326599 4.34314575,15.6568542 L4.34314575,15.6568542 Z"
-                                                    id="Combined-Shape-Copy"
-                                                />
-                                            </g>
-                                        </g>
-                                    </svg>
+                                    <CloseIcon />
                                 </button>
                                 <ErrorScreen error={this.state.error} />
                             </div>
@@ -165,7 +138,7 @@ class App extends Component {
                     handleSubmit={this.handleSubmit}
                 />
 
-                {this.renderResults()}
+                {this.renderErrorOrLoad()}
 
                 <TransitionGroup component={null}>
                     {this.state.infoArr.map(item => (
