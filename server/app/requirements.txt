@@ -12,7 +12,7 @@ numpy==1.15.2
 pendulum==2.0.3
 python-dateutil==2.7.3
 pytzdata==2018.5
-requests==2.19.1
+requests==2.20.0
 requests-cache==0.4.13
 six==1.11.0
 timezonefinder==3.1.0
