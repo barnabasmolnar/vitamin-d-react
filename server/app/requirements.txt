@@ -8,7 +8,7 @@ itsdangerous==0.24
 Jinja2==2.10
 kwargs-only==1.0.0
 MarkupSafe==1.0
-numpy==1.15.2
+numpy==1.22.0
 pendulum==2.0.3
 python-dateutil==2.7.3
 pytzdata==2018.5
